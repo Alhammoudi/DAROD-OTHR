@@ -1,0 +1,15 @@
+Building the tensorflow datasets, from the builder directory
+tfds build othr --data_dir data
+
+
+-Running the training 
+python train.py --config ./config/config_othr.json --backup-dir ./logs/ --exp darod_othr
+
+
+- test
+
+python eval.py --path ./logs/darod_othr --eval-best
+
+
+- vizualize_testdata
+python vizualize_testdata.py --path ./logs/darod_othr
